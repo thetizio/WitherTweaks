@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.tizio.withertweaks.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "WitherInvulnerability",
+    "WitherCanDestroy",
+    "WitherSkullExplosion"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
