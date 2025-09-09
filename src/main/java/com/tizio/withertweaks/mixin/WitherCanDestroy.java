@@ -13,7 +13,7 @@ public class WitherCanDestroy {
 
     @Inject(method = "canDestroy", at = @At("HEAD"), cancellable = true)
     private static void destroy(BlockState state, CallbackInfoReturnable<Boolean> cir){
-        if(Config.WITHER_DESTROY_LEVEL.getAsInt()<2) cir.setReturnValue(false);
+        if(Config.WITHER_DESTROY_LEVEL.get()<2) cir.setReturnValue(false);
     }
 
 }

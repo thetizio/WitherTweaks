@@ -21,13 +21,12 @@ public class WitherSkullExplosion extends AbstractHurtingProjectile {
     @Inject(method = "onHit", at = @At("HEAD"), cancellable = true)
     public void skullExplosion(HitResult result, CallbackInfo ci){
 
-        if (Config.WITHER_DESTROY_LEVEL.getAsInt()==0) {
+        if(Config.WITHER_DESTROY_LEVEL.get()==0){
             super.onHit(result);
             if (!this.level().isClientSide) {
                 this.discard();
             }
             ci.cancel();
-
         }
 
     }

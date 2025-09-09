@@ -1,18 +1,17 @@
 package com.tizio.withertweaks;
 
-import net.neoforged.bus.api.IEventBus;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.ModContainer;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 @Mod(WitherTweaks.MODID)
 public class WitherTweaks {
 
     public static final String MODID = "withertweaks";
 
-    public WitherTweaks(IEventBus modEventBus, ModContainer modContainer) {
+    public WitherTweaks(FMLJavaModLoadingContext context) {
 
-        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+        context.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
     }
 
